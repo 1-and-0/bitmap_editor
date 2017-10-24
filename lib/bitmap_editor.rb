@@ -11,12 +11,15 @@ class BitmapEditor
       case cmd[0]
       when 'I'
         unless BitmapValidator::validateBitmap(cmd[1], cmd[2])
-          puts 'invalid bitmap size'
-          return
+          puts "invalid bitmap size (#{cmd[1]},#{cmd[2]})"
+          next
         end
         @bitmap = Bitmap.new(cmd[1].to_i, cmd[2].to_i)
       else
-        puts 'Bitmap not yet created' unless @bitmap
+        unless @bitmap
+          puts 'Bitmap not yet created'
+          next
+        end
         @bitmap.executeCommand(cmd, @bitmap)
       end
     end

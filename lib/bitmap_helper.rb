@@ -59,10 +59,11 @@ module BitmapHelper
     else
       transposedmap[y][x2..x1] = transposedmap[y][x2..x1].map! { c }
     end
-    bitmap.map = transposedmap.transpose
+    bitmap.map = transposedmap.transpose unless x1 == x2
   end
 
   def drawPixel(x, y, c, bitmap)
-    bitmap.map[x.to_i][y.to_i] = c
+    x, y = x.to_i, y.to_i
+    bitmap.map[x][y] = c
   end
 end
