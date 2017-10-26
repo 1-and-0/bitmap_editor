@@ -1,6 +1,8 @@
 require_relative 'bitmap'
+require_relative 'bitmap_validator'
 
 class BitmapEditor
+  include BitmapValidator
 
   def run(file)
     return puts "please provide correct file" if file.nil? || !File.exists?(file)
@@ -10,7 +12,7 @@ class BitmapEditor
       cmd = line.split(" ")
       case cmd[0]
       when 'I'
-        unless BitmapValidator::validateBitmap(cmd[1], cmd[2])
+        unless BitmapValidator.validateBitmap(cmd[1], cmd[2])
           puts "invalid bitmap size (#{cmd[1]},#{cmd[2]})"
           next
         end
