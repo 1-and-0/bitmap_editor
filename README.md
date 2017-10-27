@@ -4,8 +4,8 @@
 - # Documentation
 - 
 - **Create a new Bitmap**
--   You can initialize a new Bitmap by using the command I followed the rows and columns.
--   I 3 3 -> creates a bitmap of size [3 X 3] with the default colour 'O'.
+-   You can initialize a new Bitmap by using the command '**I**' followed the rows and columns.
+-   **I 3 3**-> creates a bitmap of size [3 X 3] with the default colour 'O'.
 -   
 -   The width and the hight needed to be positive and valid integers, If not "invalid bitmap size ([x],[y])" is displayed.
 - 
@@ -76,3 +76,7 @@
 - `>bin/bitmap_editor examples/show.txt`
 - 
 - # Running Test
+- rspec spec/bitmap_editor_spec.rb
+- rspec spec/bitmap_helper_spec.rb
+- rspec spec/bitmap_validator_spec.rb
+- rpsec spec/bitmap_spec.rb
