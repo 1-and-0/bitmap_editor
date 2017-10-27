@@ -9,6 +9,7 @@ class BitmapEditor
 
     File.open(file).each do |line|
       line = line.chomp
+      line.upcase!
       cmd = line.split(" ")
       case cmd[0]
       when 'I'
