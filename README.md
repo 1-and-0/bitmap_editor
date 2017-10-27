@@ -5,7 +5,7 @@
 - 
 - **Create a new Bitmap**
 -   You can initialize a new Bitmap by using the command '**I**' followed the rows and columns.
--   `>**I 3 3**-> creates a bitmap of size [3 X 3] with the default colour 'O'.`
+-   `> 'I 3 3' creates a bitmap of size [3 X 3] with the default colour 'O'.`
 -   
 -   The width and the hight needed to be positive and valid integers, If not "invalid bitmap size ([x],[y])" is displayed.
 - 
@@ -14,7 +14,7 @@
 -   When you try to run the commands without initializing bitmap "Bitmap not yet created" message will be displayed.
 -   
 -   _1. printBitmap_
--   `>executed with the command '**S**'`
+-   `>executed with the command 'S'`
 -   prints the bitmap row wise
 -   starts with a '------start---------' and ends with a '---------end-------'
 -   
@@ -27,7 +27,7 @@
 -   
 -   _2. clearBitmap_
 -   replaces every pixel with color 'O' the default colour
--   `>executed with the command '**C**'`
+-   `>executed with the command 'C'`
 -   ----start--------
 -   O	O	O	O	O	O	O	O	
 -   O	O	O	O	O	O	O	O	
